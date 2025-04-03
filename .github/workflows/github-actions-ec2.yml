@@ -19,41 +19,36 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # Actualizar paquetes e instalar Apache
+            sudo apt-get update && sudo apt-get install -y git
             sudo apt-get -y update
             sudo apt-get install -y apache2
             
-            # Asegurar que Apache se inicie y se habilite al arrancar
             sudo systemctl start apache2
             sudo systemctl enable apache2
             
-            # Instalar Node.js y Angular CLI
             curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
             sudo apt-get install -y nodejs
             sudo npm install -g @angular/cli
 
-            # Ir al directorio donde está el código (ajústalo si es diferente)
-            cd /home/ubuntu/Blog
+            cd /home/ubuntu
+            sudo rm -rf blog
 
-            # Instalar dependencias de Angular
+            git clone https://github.com/Jordisketch/Blog.git blog
+            cd blog
+
             npm install
 
-            # Construir la aplicación Angular en modo producción
             ng build --configuration=production
 
-            # Mover los archivos generados al directorio de Apache
             sudo rm -rf /var/www/html/*
-            sudo cp -r dist/Blog/* /var/www/html/
+            sudo cp -r dist/blog/* /var/www/html/
 
-            # Ajustar permisos
             sudo chown -R www-data:www-data /var/www/html
             sudo chmod -R 755 /var/www/html
 
-            # Habilitar mod_rewrite en Apache
             sudo a2enmod rewrite
             sudo systemctl restart apache2
 
-            # Configurar .htaccess para manejar rutas de Angular
             echo '  
             <IfModule mod_rewrite.c>
                 RewriteEngine On
