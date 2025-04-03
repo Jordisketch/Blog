@@ -38,7 +38,7 @@ jobs:
 
             npm install
 
-            ng build --configuration=production
+            ng build
 
             sudo rm -rf /var/www/html/*
             sudo cp -r dist/blog/* /var/www/html/
