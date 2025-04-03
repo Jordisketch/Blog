@@ -60,7 +60,5 @@ jobs:
             </IfModule>
             ' | sudo tee /var/www/html/.htaccess
 
-            # Reiniciar Apache para aplicar los cambios
             sudo systemctl restart apache2
 
-            echo "🚀 Despliegue de Angular en Apache completado"
