@@ -8,25 +8,6 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to EC2 on master branch push
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout the files
-        uses: actions/checkout@v2
-
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
-
-      - name: Executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
-    jobs:
-  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -39,31 +20,41 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            # Actualizar paquetes e instalar Apache
             sudo apt-get -y update
             sudo apt-get install -y apache2
             
+            # Asegurar que Apache se inicie y se habilite al arrancar
             sudo systemctl start apache2
             sudo systemctl enable apache2
             
+            # Instalar Node.js y Angular CLI
             curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
             sudo apt-get install -y nodejs
             sudo npm install -g @angular/cli
 
-            cd /home
+            # Ir al directorio donde está el código (ajústalo si es diferente)
+            cd /home/ubuntu/app
 
+            # Instalar dependencias de Angular
             npm install
 
+            # Construir la aplicación Angular en modo producción
             ng build --configuration=production
 
+            # Mover los archivos generados al directorio de Apache
             sudo rm -rf /var/www/html/*
             sudo cp -r dist/Blog/* /var/www/html/
 
+            # Ajustar permisos
             sudo chown -R www-data:www-data /var/www/html
             sudo chmod -R 755 /var/www/html
 
+            # Habilitar mod_rewrite en Apache
             sudo a2enmod rewrite
             sudo systemctl restart apache2
 
+            # Configurar .htaccess para manejar rutas de Angular
             echo '  
             <IfModule mod_rewrite.c>
                 RewriteEngine On
@@ -75,4 +66,7 @@ jobs:
             </IfModule>
             ' | sudo tee /var/www/html/.htaccess
 
+            # Reiniciar Apache para aplicar los cambios
             sudo systemctl restart apache2
+
+            echo "🚀 Despliegue de Angular en Apache completado"
