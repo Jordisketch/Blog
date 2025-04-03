@@ -1,0 +1,10 @@
+{
+  "WELCOME": "Bienvenido a mi aplicación",
+  "this-project": {
+    "title": "Información sobre el proyecto",
+    "description": "Este proyecto tiene como objetivo presentar información sobre los proyectos que he desarrollado, detallando las tecnologías utilizadas, los servicios de AWS implementados, las configuraciones aplicadas y otros aspectos relevantes.",
+    "folder-structure": "Estructura de carpetas",
+    "technologies": "Tecnologías utilizadas",
+    "devops-services": "Servicios utilizados para el despliegue de la aplicación"
+  }
+}

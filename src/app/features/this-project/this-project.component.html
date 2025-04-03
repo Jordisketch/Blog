@@ -1,0 +1,48 @@
+<div class="w-full p-6 space-y-10">
+  <div class="text-center">
+    <h1 class="text-3xl font-bold">🚀 {{ 'this-project.title' | translate }}</h1>
+    <p class="text-gray-600">{{ 'this-project.description' | translate }}</p>
+  </div>
+
+  <div class="grid gap-10 w-full">
+    <div class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 w-full">
+      <h2 class="text-xl font-semibold mb-3">🛠️ {{ 'this-project.technologies' | translate }}</h2>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>Tailwind CSS</li>
+        <li>Prime NG</li>
+        <li>AWS</li>
+        <li>Prettier - ESLint</li>
+        <li>NGX Translate</li>
+        <li>Git/GitHub</li>
+      </ul>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 w-full">
+      <h2 class="text-xl font-semibold mb-3">
+        📂 {{ 'this-project.folder-structure' | translate }}
+      </h2>
+      <pre class="bg-gray-800 text-white p-4 rounded-md text-sm overflow-auto">
+        /src
+        ├── /app
+        │   ├── /features
+        │   ├── /routes
+        │   ├── /shared
+        ├── /assets
+        │   ├── /styles
+        │   ├── /services
+      </pre>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 w-full">
+      <h2 class="text-xl font-semibold mb-3">
+        ☁️ {{ 'this-project.devops-services' | translate }}
+      </h2>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <li>AWS EC2</li>
+        <li>GitHub Actions</li>
+      </ul>
+    </div>
+  </div>
+</div>

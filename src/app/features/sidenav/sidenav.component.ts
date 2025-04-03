@@ -6,13 +6,14 @@ import { Ripple } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
 import { StyleClass } from 'primeng/styleclass';
 import { Drawer } from 'primeng/drawer';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'blog-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.css',
   standalone: true,
-  imports: [DrawerModule, ButtonModule, Ripple, AvatarModule, StyleClass],
+  imports: [DrawerModule, ButtonModule, Ripple, AvatarModule, StyleClass, RouterLink],
 })
 export class SidenavComponent {
   @ViewChild('drawerRef') drawerRef!: Drawer;
