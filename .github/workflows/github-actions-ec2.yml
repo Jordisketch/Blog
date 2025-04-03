@@ -34,7 +34,7 @@ jobs:
             sudo npm install -g @angular/cli
 
             # Ir al directorio donde está el código (ajústalo si es diferente)
-            cd /home
+            cd /home/Blog
 
             # Instalar dependencias de Angular
             npm install
