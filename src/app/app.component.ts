@@ -9,7 +9,6 @@ import { TranslateService } from '@ngx-translate/core';
   imports: [RouterOutlet, SidenavComponent, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  standalone: true,
 })
 export class AppComponent {
   title = 'Jhidalgo Blog';

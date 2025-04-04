@@ -12,7 +12,6 @@ import { RouterLink } from '@angular/router';
   selector: 'blog-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.css',
-  standalone: true,
   imports: [DrawerModule, ButtonModule, Ripple, AvatarModule, StyleClass, RouterLink],
 })
 export class SidenavComponent {

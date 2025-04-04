@@ -6,6 +6,5 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule],
   templateUrl: './this-project.component.html',
   styleUrl: './this-project.component.css',
-  standalone: true,
 })
 export class ThisProjectComponent {}
