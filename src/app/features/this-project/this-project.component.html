@@ -14,7 +14,6 @@
         <li>Prime NG</li>
         <li>AWS S3</li>
         <li>AWS Pipeline</li>
-        <li>AWS Certificate</li>
         <li>AWS Route 53</li>
         <li>Prettier - ESLint</li>
         <li>NGX Translate</li>
@@ -28,11 +27,33 @@
       </h2>
       <pre class="bg-gray-800 text-white p-4 rounded-md text-sm overflow-auto">
         /src
+        ├── /public
+        ├── ├── /i18n
         ├── /app
         │   ├── /features
         │   ├── /shared
         ├── /environments
       </pre>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 w-full mt-6">
+      <h2 class="text-xl font-semibold mb-3">
+        🚀 {{ 'this-project.deployment-diagram' | translate }}
+      </h2>
+      <div class="w-full overflow-auto flex justify-center">
+        <img
+          src="https://imagesnarhidalgo.s3.us-east-1.amazonaws.com/diagramUpload.png"
+          alt="Deployment Diagram"
+        />
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 w-full mt-6">
+      <h2 class="text-xl font-semibold mb-3">🚀 {{ 'this-project.get-diagram' | translate }}</h2>
+      <div class="w-full overflow-auto flex justify-center">
+        <img
+          src="https://imagesnarhidalgo.s3.us-east-1.amazonaws.com/diagramGet.png"
+          alt="Deployment Diagram"
+        />
+      </div>
     </div>
   </div>
 </div>

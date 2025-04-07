@@ -1,68 +1,78 @@
-<div class="grid gap-4 p-4">
+<div class="flex flex-col">
   <div class="card text-center py-8">
     <h1 class="text-3xl font-bold">{{ 'about.name' | translate }}</h1>
     <p class="text-lg text-gray-500">{{ 'about.job' | translate }}</p>
-    <button mat-raised-button color="primary">
-      <mat-icon>cloud_download</mat-icon>
-      {{ 'hero.download_cv' | translate }}
-    </button>
   </div>
 
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ 'about.title' | translate }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ 'about.description' | translate }}</p>
-    </mat-card-content>
-  </mat-card>
+  <div class="flex flex-col gap-4">
+    <!-- About -->
+    <mat-card>
+      <mat-card-header>
+        <span>👤</span>
+        <mat-card-title>{{ 'about.title' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ 'about.description' | translate }}</p>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ 'skills.title' | translate }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-chip-set aria-label="Fish selection">
-        <mat-chip *ngFor="let skill of skills">{{ skill }}</mat-chip>
-      </mat-chip-set>
-    </mat-card-content>
-  </mat-card>
+    <!-- Skills -->
+    <mat-card>
+      <mat-card-header>
+        <span>🔧</span>
+        <mat-card-title>{{ 'skills.title' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-chip-set aria-label="Skill set">
+          <mat-chip *ngFor="let skill of skills">{{ skill }}</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ 'certifications.title' | translate }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="carousel">
-        <div *ngFor="let cert of certifications" class="carousel-item">
-          <span>{{ cert }}</span>
+    <!-- Certifications -->
+    <mat-card>
+      <mat-card-header>
+        <span>✅</span>
+        <mat-card-title>{{ 'certifications.title' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="carousel">
+          <div *ngFor="let cert of certifications" class="flex gap-3">
+            <span>🎓</span>
+            <span>{{ cert }}</span>
+          </div>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ 'contact.title' | translate }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ 'contact.description' | translate }}</p>
-      <div class="flex flex-column gap-2">
-        <div>
-          <strong> {{ 'contact.email_label' | translate }}:</strong>
-          <a href="mailto:hidalgojordi7@gmail.com">hidalgojordi7&#64;gmail.com</a>
+    <!-- Contact -->
+    <mat-card>
+      <mat-card-header>
+        <span>📧</span>
+        <mat-card-title>{{ 'contact.title' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ 'contact.description' | translate }}</p>
+        <div class="flex flex-wrap gap-2">
+          <div class="flex gap-1 items-center">
+            <span>📧</span>
+            <strong>{{ 'contact.email_label' | translate }}:</strong>
+            <a href="mailto:hidalgojordi7@gmail.com">hidalgojordi7&#64;gmail.com</a>
+          </div>
+          <div class="flex gap-1 items-center">
+            <span>🔗</span>
+            <strong>{{ 'contact.linkedin_label' | translate }}:</strong>
+            <a href="https://www.linkedin.com/in/jordi-hidalgo-palma/">
+              linkedin.com/in/jordi-hidalgo-palma
+            </a>
+          </div>
+          <div class="flex gap-1 items-center">
+            <span>💻</span>
+            <strong>{{ 'contact.github_label' | translate }}:</strong>
+            <a href="https://github.com/Jordisketch">github.com/Jordisketch</a>
+          </div>
         </div>
-        <div>
-          <strong>{{ 'contact.linkedin_label' | translate }}:</strong>
-          <a href="https://www.linkedin.com/in/jordi-hidalgo-palma/">
-            linkedin.com/in/jordi-hidalgo-palma</a
-          >
-        </div>
-        <div>
-          <strong>{{ 'contact.github_label' | translate }}:</strong>
-          <a href="https://github.com/Jordisketch"> github.com/Jordisketch</a>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

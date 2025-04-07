@@ -1,0 +1,43 @@
+{
+  "WELCOME": "Welcome to my application",
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate software engineer with experience in .NET, Angular, and AWS. I enjoy building scalable and maintainable systems, and I take pride in writing clean, efficient code. I'm highly adaptable and thrive in dynamic environments, quickly getting up to speed with new technologies and project requirements. My strongest interest lies in cloud computing—especially AWS—where I aim to specialize. I've had the opportunity to build applications from scratch using Angular, following best practices such as reusable components and modular design. On the backend, I apply design patterns in .NET to maximize code reusability and maintainability. I also focus on crafting normalized database structures to ensure data integrity and system scalability.",
+    "name": "Jordi Hidalgo Palma",
+    "job": "Software Engineer"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor's in Software Engineering",
+    "institution": "Castro Carazo",
+    "location": "Alajuela, Costa Rica",
+    "date": "Jan 2020 - Present"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "clean_code": "Clean Code",
+    "angular_core": "Angular Core Deep Dive",
+    "git_github": "Git & GitHub",
+    "communication": "Assertive Communication",
+    "csharp_masterclass": "Ultimate C# Masterclass"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out to me via email or through my LinkedIn.",
+    "email_label": "Email",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub"
+  },
+  "this-project": {
+    "title": "Project Information",
+    "description": "This project aims to showcase the applications I have developed, detailing the technologies used, the AWS services implemented, the configurations applied, and other relevant aspects.",
+    "folder-structure": "Folder Structure",
+    "technologies": "Technologies Used",
+    "devops-services": "Services Used for Application Deployment",
+    "deployment-diagram": "Deployment Flow with AWS & GitHub",
+    "get-diagram": "Services to access the page"
+  }
+}

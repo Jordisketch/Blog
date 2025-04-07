@@ -7,15 +7,26 @@ import { AvatarModule } from 'primeng/avatar';
 import { StyleClass } from 'primeng/styleclass';
 import { Drawer } from 'primeng/drawer';
 import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'blog-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.css',
-  imports: [DrawerModule, ButtonModule, Ripple, AvatarModule, StyleClass, RouterLink],
+  imports: [
+    DrawerModule,
+    ButtonModule,
+    Ripple,
+    AvatarModule,
+    StyleClass,
+    RouterLink,
+    MatIconModule,
+  ],
 })
 export class SidenavComponent {
   @ViewChild('drawerRef') drawerRef!: Drawer;
+
+  isMenuOpen = false;
 
   closeCallback(e: any): void {
     this.drawerRef.close(e);

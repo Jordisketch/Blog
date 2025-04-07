@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatChipsModule,
     MatIconModule,
+    MatCardModule,
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css',

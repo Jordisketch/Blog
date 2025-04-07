@@ -1,5 +1,27 @@
 @import 'tailwindcss';
 @import 'primeicons/primeicons.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  background-color: #f4f5f0;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+mat-card {
+  background-color: white !important;
+}
+
+mat-card-title {
+  font-weight: 500 !important;
+  margin-bottom: 10px !important;
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}

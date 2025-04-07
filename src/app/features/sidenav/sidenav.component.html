@@ -1,46 +1,61 @@
-<div class="card flex justify-start">
-  <div class="flex flex-col h-full">
-    <div class="flex items-center justify-between px-6 pt-4 shrink-0"></div>
-    <div class="overflow-y-auto">
-      <ul class="list-none p-4 m-0">
-        <li>
+<div class="flex text-gray-900 sidebar">
+  <aside class="flex h-screen w-20 flex-col items-center border-r border-gray-200">
+    <nav class="flex flex-1 flex-col gap-y-4 pt-10">
+      <!-- About Me -->
+      <a routerLink="/about-me" class="group relative rounded-xl p-2 hover:bg-gray-50">
+        <mat-icon>person</mat-icon>
+        <div class="absolute inset-y-0 left-12 hidden items-center group-hover:flex">
           <div
-            pRipple
-            pStyleClass="@next"
-            enterFromClass="hidden"
-            enterActiveClass="animate-slidedown"
-            leaveToClass="hidden"
-            leaveActiveClass="animate-slideup"
-            class="p-4 flex items-center justify-between text-surface-600 dark:text-surface-200 cursor-pointer p-ripple"
+            class="relative whitespace-nowrap rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 drop-shadow-lg"
           >
-            <a routerLink="/about-me">
-              <span class="font-medium">About me</span>
-            </a>
+            <div class="absolute inset-0 -left-1 flex items-center">
+              <div class="h-2 w-2 rotate-45 bg-white"></div>
+            </div>
+            About Me
           </div>
+        </div>
+      </a>
+
+      <!-- This Project -->
+      <a routerLink="/this-project" class="group relative rounded-xl p-2 hover:bg-gray-50">
+        <mat-icon>work</mat-icon>
+        <div class="absolute inset-y-0 left-12 hidden items-center group-hover:flex">
           <div
-            pRipple
-            pStyleClass="@next"
-            enterFromClass="hidden"
-            enterActiveClass="animate-slidedown"
-            leaveToClass="hidden"
-            leaveActiveClass="animate-slideup"
-            class="p-4 flex items-center justify-between text-surface-600 dark:text-surface-200 cursor-pointer p-ripple"
+            class="relative whitespace-nowrap rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 drop-shadow-lg"
           >
-            <span class="font-medium">Projects</span>
+            <div class="absolute inset-0 -left-1 flex items-center">
+              <div class="h-2 w-2 rotate-45 bg-white"></div>
+            </div>
+            This Project
           </div>
-          <ul class="list-none p-0 m-0 overflow-hidden">
-            <li>
-              <a
-                pRipple
-                class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
-                routerLink="/this-project"
-              >
-                <span class="font-medium ml-5">This project</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+        </div>
+      </a>
+    </nav>
+
+    <div class="flex flex-col items-center gap-y-4 py-10">
+      <button class="group relative rounded-xl p-2 text-gray-400 hover:bg-gray-100">
+        <svg
+          width="24"
+          height="24"
+          class="h-6 w-6 stroke-current"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12 16H12.01M12 8V12V8Z"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
     </div>
-  </div>
+  </aside>
 </div>
