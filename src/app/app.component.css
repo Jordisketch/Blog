@@ -1,0 +1,8 @@
+mat-drawer-container {
+  background-color: #f4f5f0;
+}
+
+mat-drawer {
+  border-right: 2px solid black;
+  background-color: #ffff;
+}

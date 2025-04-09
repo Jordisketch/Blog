@@ -34,10 +34,14 @@
   "this-project": {
     "title": "Project Information",
     "description": "This project aims to showcase the applications I have developed, detailing the technologies used, the AWS services implemented, the configurations applied, and other relevant aspects.",
-    "folder-structure": "Folder Structure",
-    "technologies": "Technologies Used",
-    "devops-services": "Services Used for Application Deployment",
-    "deployment-diagram": "Deployment Flow with AWS & GitHub",
+    "folder-structure": "Folder structure",
+    "technologies": "Technologies used",
+    "deployment-diagram": "Deployment flow with AWS & GitHub",
     "get-diagram": "Services to access the page"
+  },
+  "languages": {
+    "spanish": "Spanish",
+    "english": "English",
+    "select": "Select a language"
   }
 }

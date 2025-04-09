@@ -1,0 +1,47 @@
+{
+  "WELCOME": "Bienvenido a mi aplicación",
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy un apasionado ingeniero de software con experiencia en .NET, Angular y AWS. Disfruto construyendo sistemas escalables y mantenibles, y me enorgullece escribir código limpio y eficiente. Me adapto fácilmente y prospero en entornos dinámicos, aprendiendo rápidamente nuevas tecnologías y requisitos de proyectos. Mi mayor interés se encuentra en la computación en la nube, especialmente en AWS, donde busco especializarme. He tenido la oportunidad de construir aplicaciones desde cero usando Angular, siguiendo buenas prácticas como componentes reutilizables y diseño modular. En el backend, aplico patrones de diseño en .NET para maximizar la reutilización del código y su mantenibilidad. También me enfoco en diseñar estructuras de bases de datos normalizadas para asegurar la integridad de los datos y la escalabilidad del sistema.",
+    "name": "Jordi Hidalgo Palma",
+    "job": "Ingeniero de Software"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "education": {
+    "title": "Educación",
+    "degree": "Bachillerato en Ingeniería de Software",
+    "institution": "Castro Carazo",
+    "location": "Alajuela, Costa Rica",
+    "date": "Ene 2020 - Presente"
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "clean_code": "Código Limpio",
+    "angular_core": "Angular Core Deep Dive",
+    "git_github": "Git y GitHub",
+    "communication": "Comunicación Asertiva",
+    "csharp_masterclass": "Masterclass Definitiva de C#"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "No dudes en contactarme por correo electrónico o a través de LinkedIn.",
+    "email_label": "Correo electrónico",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub"
+  },
+  "this-project": {
+    "title": "Información del Proyecto",
+    "description": "Este proyecto tiene como objetivo mostrar las aplicaciones que he desarrollado, detallando las tecnologías utilizadas, los servicios de AWS implementados, las configuraciones aplicadas y otros aspectos relevantes.",
+    "folder-structure": "Estructura de carpetas",
+    "technologies": "Tecnologías utilizadas",
+    "deployment-diagram": "Flujo de despliegue con AWS y GitHub",
+    "get-diagram": "Servicios para acceder a la página"
+  },
+  "languages": {
+    "spanish": "Español",
+    "english": "Inglés",
+    "select": "Seleccione un lenguaje"
+  }
+}

@@ -1,0 +1,18 @@
+<div class="card">
+  <p-menubar>
+    <ng-template #start> <ng-content /> </ng-template>
+
+    <ng-template #end>
+      <form [formGroup]="formGroup" class="card flex justify-center">
+        <p-select
+          [options]="languages"
+          formControlName="selectedLanguage"
+          optionLabel="language"
+          placeholder="{{ language | translate }}"
+          class="w-full md:w-56"
+          optionValue="key"
+        />
+      </form>
+    </ng-template>
+  </p-menubar>
+</div>

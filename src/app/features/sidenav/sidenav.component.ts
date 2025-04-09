@@ -1,13 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
-import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { DrawerModule } from 'primeng/drawer';
-import { Ripple } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
-import { StyleClass } from 'primeng/styleclass';
 import { Drawer } from 'primeng/drawer';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { Menu } from 'primeng/menu';
+import { CommonModule } from '@angular/common';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'blog-sidenav',
@@ -16,21 +19,31 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     DrawerModule,
     ButtonModule,
-    Ripple,
     AvatarModule,
-    StyleClass,
     RouterLink,
     MatIconModule,
+    Menu,
+    CommonModule,
+    MatMenuModule,
+    MatButtonModule,
+    TranslateModule,
   ],
 })
 export class SidenavComponent {
-  @ViewChild('drawerRef') drawerRef!: Drawer;
-
-  isMenuOpen = false;
-
-  closeCallback(e: any): void {
-    this.drawerRef.close(e);
-  }
-
-  visible: boolean = false;
+  items = [
+    {
+      items: [
+        {
+          label: 'about.title',
+          icon: 'pi pi-user',
+          route: '/about-me',
+        },
+        {
+          label: 'this-project.title',
+          icon: 'pi pi-link',
+          route: '/this-project',
+        },
+      ],
+    },
+  ];
 }
