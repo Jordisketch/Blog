@@ -1,4 +1,11 @@
-import { ChangeDetectorRef, Component, DestroyRef, effect, OnInit } from '@angular/core';
+import {
+  AfterViewChecked,
+  ChangeDetectorRef,
+  Component,
+  DestroyRef,
+  effect,
+  OnInit,
+} from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Menubar } from 'primeng/menubar';
@@ -11,7 +18,7 @@ import { LanguageChangeService } from '../../shared/services/language-change.ser
   styleUrl: './navbar.component.css',
   imports: [Menubar, FormsModule, Select, ReactiveFormsModule, TranslateModule, FormsModule],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewChecked {
   languages: { language: string; key: string }[] = [];
 
   formGroup: FormGroup = new FormGroup({});
@@ -27,9 +34,11 @@ export class NavbarComponent implements OnInit {
       this._assignLanguages();
     });
   }
+  ngAfterViewChecked(): void {
+    this._assignLanguages();
+  }
 
   ngOnInit() {
-    this._assignLanguages();
     this.formGroup = new FormGroup({
       selectedLanguage: new FormControl<string | null>('en'),
     });
