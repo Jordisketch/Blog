@@ -43,6 +43,11 @@ export class SidenavComponent {
           icon: 'pi pi-link',
           route: '/this-project',
         },
+        {
+          label: 'paynch.name',
+          icon: 'pi pi-lightbulb',
+          route: '/paynch',
+        },
       ],
     },
   ];

@@ -32,7 +32,7 @@
     "github_label": "GitHub"
   },
   "this-project": {
-    "title": "Project Information",
+    "title": "Current project information",
     "description": "This project aims to showcase the applications I have developed, detailing the technologies used, the AWS services implemented, the configurations applied, and other relevant aspects.",
     "folder-structure": "Folder structure",
     "technologies": "Technologies used",
@@ -43,5 +43,20 @@
     "spanish": "Spanish",
     "english": "English",
     "select": "Select a language"
+  },
+  "paynch": {
+    "name": "Paynch",
+    "tagline": "Fast, social, and smart payments.",
+    "description": "Paynch is a next-gen payment platform designed for seamless NFC transactions and effortless group payments. Built with a user-first approach, Paynch allows users to tap and pay instantly at compatible terminals, split bills with friends in real time, and manage shared expenses with transparency and ease. With strong security protocols and a sleek, intuitive interface, Paynch is perfect for both daily transactions and social events.",
+    "open-landing-page": "Open paynch page",
+    "features": [
+      "NFC-based instant payments",
+      "Group payment splitting",
+      "Real-time transaction notifications",
+      "Secure wallet integration",
+      "Activity feed and expense history",
+      "Multi-platform support (iOS, Android, Web)"
+    ],
+    "status": "In development"
   }
 }

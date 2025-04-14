@@ -1,14 +1,6 @@
-import {
-  AfterViewChecked,
-  ChangeDetectorRef,
-  Component,
-  DestroyRef,
-  effect,
-  OnInit,
-} from '@angular/core';
+import { AfterViewChecked, Component, effect, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Menubar } from 'primeng/menubar';
 import { Select } from 'primeng/select';
 import { LanguageChangeService } from '../../shared/services/language-change.service';
 
@@ -16,7 +8,7 @@ import { LanguageChangeService } from '../../shared/services/language-change.ser
   selector: 'blog-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  imports: [Menubar, FormsModule, Select, ReactiveFormsModule, TranslateModule, FormsModule],
+  imports: [FormsModule, Select, ReactiveFormsModule, TranslateModule, FormsModule],
 })
 export class NavbarComponent implements OnInit, AfterViewChecked {
   languages: { language: string; key: string }[] = [];
